@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomesh Soni | Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .social-links a:hover {
+            color: #0066cc;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .about {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #1a1a1a;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .project-links {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: #0052a3;
+            text-decoration: underline;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .skill-list {
+            list-style: none;
+            color: #666;
+        }
+
+        .skill-list li {
+            padding: 0.4rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            color: #999;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            header {
+                padding: 3rem 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lomesh Soni</h1>
+            <p class="subtitle">Software Developer & AI Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/LomeshSoni" target="_blank">GitHub</a>
+                <a href="https://gitfront.io/r/LomeshSoni" target="_blank">GitFront</a>
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <div class="about">
+                <p>
+                    I'm a passionate developer focused on building innovative solutions with modern technologies. 
+                    I specialize in AI integration, full-stack development, and creating efficient deployment systems.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Deploy GPT</h3>
+                    <p>
+                        An intelligent deployment automation system that leverages AI to streamline the deployment process. 
+                        Features automated configuration, intelligent error handling, and seamless integration with modern DevOps workflows.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GPT Integration</span>
+                        <span class="tech-tag">DevOps</span>
+                        <span class="tech-tag">Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank">View Code →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>
+                        A brief description of another project you've worked on. Highlight the problem it solves 
+                        and the technologies you used to build it.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project Three</h3>
+                    <p>
+                        Another interesting project showcasing your skills. Describe what makes this project unique 
+                        and what you learned while building it.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills & Technologies</h2>
+            <div class="skills">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>JavaScript/TypeScript</li>
+                        <li>SQL</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <ul class="skill-list">
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Docker</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Areas of Interest</h3>
+                    <ul class="skill-list">
+                        <li>AI Integration</li>
+                        <li>DevOps & Automation</li>
+                        <li>Full-Stack Development</li>
+                        <li>Cloud Technologies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Lomesh Soni. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
