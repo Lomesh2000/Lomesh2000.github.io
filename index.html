@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lomesh Soni | Developer</title>
+    <title>Lomesh Soni | ML Engineer</title>
     <style>
         * {
             margin: 0;
@@ -111,6 +111,31 @@
             line-height: 1.7;
         }
 
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .highlight h3,
+        .highlight p {
+            color: white;
+        }
+
+        .highlight .tech-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .highlight .project-links a {
+            color: white;
+            font-weight: 600;
+        }
+
+        .highlight .project-links a:hover {
+            text-decoration: underline;
+        }
+
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
@@ -165,6 +190,12 @@
             padding: 0.4rem 0;
         }
 
+        .skill-list li::before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             padding: 3rem 0 2rem;
@@ -193,7 +224,7 @@
     <div class="container">
         <header>
             <h1>Lomesh Soni</h1>
-            <p class="subtitle">Software Developer & AI Enthusiast</p>
+            <p class="subtitle">Machine Learning Engineer & Deep Learning Researcher</p>
             <div class="social-links">
                 <a href="https://github.com/LomeshSoni" target="_blank">GitHub</a>
                 <a href="https://gitfront.io/r/LomeshSoni" target="_blank">GitFront</a>
@@ -205,8 +236,9 @@
         <section>
             <div class="about">
                 <p>
-                    I'm a passionate developer focused on building innovative solutions with modern technologies. 
-                    I specialize in AI integration, full-stack development, and creating efficient deployment systems.
+                    Machine Learning Engineer specializing in transformer architectures and large language models. 
+                    I build ML systems from the ground up, with hands-on experience implementing state-of-the-art models like GPT. 
+                    Passionate about deep learning research and bringing AI innovations from paper to production.
                 </p>
             </div>
         </section>
@@ -214,33 +246,38 @@
         <section>
             <h2>Featured Projects</h2>
             <div class="projects">
-                <div class="project-card">
-                    <h3>Deploy GPT</h3>
+                <div class="project-card highlight">
+                    <h3>GPT Implementation from Scratch</h3>
                     <p>
-                        An intelligent deployment automation system that leverages AI to streamline the deployment process. 
-                        Features automated configuration, intelligent error handling, and seamless integration with modern DevOps workflows.
+                        Built a complete GPT (Generative Pre-trained Transformer) implementation from scratch, including 
+                        multi-head attention mechanisms, positional encodings, and the full transformer architecture. 
+                        Trained on custom datasets with optimized training pipelines. Demonstrates deep understanding 
+                        of transformer mechanics, attention mechanisms, and large-scale model training.
                     </p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">GPT Integration</span>
-                        <span class="tech-tag">DevOps</span>
-                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">Multi-Head Attention</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">NLP</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank">View Code →</a>
+                        <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank">View Implementation →</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Two</h3>
+                    <h3>Neural Network Framework</h3>
                     <p>
-                        A brief description of another project you've worked on. Highlight the problem it solves 
-                        and the technologies you used to build it.
+                        Custom neural network framework implementing backpropagation, various optimization algorithms 
+                        (SGD, Adam, RMSprop), and common layer types. Built to understand the fundamentals of deep 
+                        learning frameworks and automatic differentiation.
                     </p>
                     <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Autograd</span>
+                        <span class="tech-tag">Optimization</span>
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank">View Project →</a>
@@ -248,15 +285,17 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Project Three</h3>
+                    <h3>Computer Vision Pipeline</h3>
                     <p>
-                        Another interesting project showcasing your skills. Describe what makes this project unique 
-                        and what you learned while building it.
+                        End-to-end computer vision system featuring custom CNN architectures, data augmentation 
+                        pipelines, and model deployment. Achieved state-of-the-art performance on benchmark datasets 
+                        through architecture optimization and transfer learning.
                     </p>
                     <div class="tech-stack">
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Keras</span>
+                        <span class="tech-tag">CNNs</span>
+                        <span class="tech-tag">Transfer Learning</span>
                     </div>
                     <div class="project-links">
                         <a href="#" target="_blank">View Project →</a>
@@ -266,40 +305,43 @@
         </section>
 
         <section>
-            <h2>Skills & Technologies</h2>
+            <h2>Technical Expertise</h2>
             <div class="skills">
                 <div class="skill-category">
-                    <h3>Languages</h3>
+                    <h3>Deep Learning</h3>
                     <ul class="skill-list">
-                        <li>Python</li>
-                        <li>JavaScript/TypeScript</li>
-                        <li>SQL</li>
-                        <li>HTML/CSS</li>
+                        <li>Transformer Architectures</li>
+                        <li>CNNs & Computer Vision</li>
+                        <li>RNNs & LSTMs</li>
+                        <li>GANs & Generative Models</li>
+                        <li>Attention Mechanisms</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
+                    <h3>ML Frameworks & Tools</h3>
                     <ul class="skill-list">
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Docker</li>
-                        <li>Git</li>
+                        <li>PyTorch</li>
+                        <li>TensorFlow / Keras</li>
+                        <li>Hugging Face Transformers</li>
+                        <li>scikit-learn</li>
+                        <li>CUDA / GPU Programming</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Areas of Interest</h3>
+                    <h3>MLOps & Deployment</h3>
                     <ul class="skill-list">
-                        <li>AI Integration</li>
-                        <li>DevOps & Automation</li>
-                        <li>Full-Stack Development</li>
-                        <li>Cloud Technologies</li>
+                        <li>Model Training Pipelines</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>MLflow & Experiment Tracking</li>
+                        <li>Model Optimization & Quantization</li>
+                        <li>Cloud Deployment (AWS/GCP)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Lomesh Soni. All rights reserved.</p>
+            <p>&copy; 2025 Lomesh Soni. Building the future with machine learning.</p>
         </footer>
     </div>
 </body>
