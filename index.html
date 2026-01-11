@@ -12,241 +12,377 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #fafafa;
+            color: #2d3748;
+            background: #ffffff;
         }
 
-        .container {
-            max-width: 900px;
+        /* Navbar */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 0 3rem;
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 3rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #1a1a1a;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links {
+            padding: 1rem 2rem;
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .social-links a {
-            color: #333;
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a202c;
             text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
             font-size: 0.95rem;
         }
 
-        .social-links a:hover {
-            color: #0066cc;
+        .nav-links a:hover {
+            color: #667eea;
         }
 
-        section {
-            margin-bottom: 4rem;
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
         }
 
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: #1a1a1a;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1a202c;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
 
-        .about {
+        .bio {
             max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            color: #555;
-            font-size: 1.05rem;
+            margin: 0 auto 2.5rem;
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        .projects {
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #f7fafc;
+            color: #2d3748;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: #1a202c;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
-            background: white;
+            background: #ffffff;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
         }
 
         .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            border-color: #667eea;
         }
 
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: #1a1a1a;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .highlight {
+        .project-card.featured {
+            border: 2px solid #667eea;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-card.featured h3,
+        .project-card.featured p {
             color: white;
         }
 
-        .highlight h3,
-        .highlight p {
-            color: white;
-        }
-
-        .highlight .tech-tag {
+        .project-card.featured .tech-tag {
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .highlight .project-links a {
+        .project-card.featured .project-link {
             color: white;
-            font-weight: 600;
+            border-color: white;
         }
 
-        .highlight .project-links a:hover {
-            text-decoration: underline;
+        .project-card.featured:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .tech-tag {
-            background: #f0f0f0;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
+            background: #edf2f7;
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
             font-size: 0.85rem;
-            color: #555;
+            color: #4a5568;
+            font-weight: 500;
         }
 
-        .project-links {
-            margin-top: 1.2rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-links a {
-            color: #0066cc;
+        .project-link {
+            display: inline-block;
+            color: #667eea;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
         }
 
-        .project-links a:hover {
-            color: #0052a3;
-            text-decoration: underline;
+        .project-link:hover {
+            border-bottom-color: #667eea;
         }
 
-        .skills {
+        /* Skills Section */
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
+        .skill-category {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
         .skill-category h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: #1a202c;
+            font-weight: 700;
         }
 
         .skill-list {
             list-style: none;
-            color: #666;
         }
 
         .skill-list li {
-            padding: 0.4rem 0;
+            padding: 0.6rem 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
         }
 
         .skill-list li::before {
-            content: "▹ ";
+            content: "▹";
             color: #667eea;
             font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
         }
 
+        /* Footer */
         footer {
+            background: #f7fafc;
             text-align: center;
-            padding: 3rem 0 2rem;
-            color: #999;
-            font-size: 0.9rem;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 4rem;
+            padding: 3rem 2rem;
+            color: #718096;
+            font-size: 0.95rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 5rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2d3748;
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
-            .container {
-                padding: 1.5rem;
+            .title {
+                font-size: 1.2rem;
             }
 
-            header {
-                padding: 3rem 0 2rem;
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">LS</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <h1>Lomesh Soni</h1>
+        <p class="title">Machine Learning Engineer</p>
+        <p class="bio">
+            Machine Learning Engineer specializing in transformer architectures and large language models. 
+            I build ML systems from the ground up, with hands-on experience implementing state-of-the-art models like GPT. 
+            Passionate about deep learning research and bringing AI innovations from paper to production.
+        </p>
+        <div class="contact-links" id="contact">
+            <a href="mailto:your.email@gmail.com" class="contact-btn">
+                <span>📧</span> Email
+            </a>
+            <a href="https://github.com/LomeshSoni" target="_blank" class="contact-btn">
+                <span>💻</span> GitHub
+            </a>
+            <a href="https://gitfront.io/r/LomeshSoni" target="_blank" class="contact-btn">
+                <span>📁</span> GitFront
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn">
+                <span>💼</span> LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
     <div class="container">
-        <header>
-            <h1>Lomesh Soni</h1>
-            <p class="subtitle">Machine Learning Engineer & Deep Learning Researcher</p>
-            <div class="social-links">
-                <a href="https://github.com/LomeshSoni" target="_blank">GitHub</a>
-                <a href="https://gitfront.io/r/LomeshSoni" target="_blank">GitFront</a>
-                <a href="mailto:your.email@example.com">Email</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            </div>
-        </header>
-
-        <section>
-            <div class="about">
-                <p>
-                    Machine Learning Engineer specializing in transformer architectures and large language models. 
-                    I build ML systems from the ground up, with hands-on experience implementing state-of-the-art models like GPT. 
-                    Passionate about deep learning research and bringing AI innovations from paper to production.
-                </p>
-            </div>
-        </section>
-
-        <section>
+        <!-- Projects Section -->
+        <section id="projects">
             <h2>Featured Projects</h2>
-            <div class="projects">
-                <div class="project-card highlight">
+            <div class="projects-grid">
+                <div class="project-card featured">
                     <h3>GPT Implementation from Scratch</h3>
                     <p>
                         Built a complete GPT (Generative Pre-trained Transformer) implementation from scratch, including 
@@ -261,9 +397,7 @@
                         <span class="tech-tag">Deep Learning</span>
                         <span class="tech-tag">NLP</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank">View Implementation →</a>
-                    </div>
+                    <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank" class="project-link">View Implementation →</a>
                 </div>
 
                 <div class="project-card">
@@ -279,9 +413,7 @@
                         <span class="tech-tag">Autograd</span>
                         <span class="tech-tag">Optimization</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project →</a>
-                    </div>
+                    <a href="#" target="_blank" class="project-link">View Project →</a>
                 </div>
 
                 <div class="project-card">
@@ -297,16 +429,15 @@
                         <span class="tech-tag">CNNs</span>
                         <span class="tech-tag">Transfer Learning</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project →</a>
-                    </div>
+                    <a href="#" target="_blank" class="project-link">View Project →</a>
                 </div>
             </div>
         </section>
 
-        <section>
+        <!-- Skills Section -->
+        <section id="skills">
             <h2>Technical Expertise</h2>
-            <div class="skills">
+            <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Deep Learning</h3>
                     <ul class="skill-list">
@@ -339,10 +470,11 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <p>&copy; 2025 Lomesh Soni. Building the future with machine learning.</p>
-        </footer>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lomesh Soni. Building the future with machine learning.</p>
+    </footer>
 </body>
 </html>
