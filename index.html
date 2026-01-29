@@ -237,32 +237,6 @@
             border-color: #667eea;
         }
 
-        .project-card.featured {
-            border: 2px solid #667eea;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .project-card.featured h3,
-        .project-card.featured p {
-            color: white !important;
-        }
-
-        .project-card.featured .tech-tag {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .project-card.featured .project-link {
-            color: white;
-            border-color: white;
-        }
-
-        .project-card.featured:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-
         .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -305,6 +279,52 @@
             border-bottom-color: #667eea;
         }
 
+        /* Experience Section */
+        .experience-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            background: #1e293b;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-header h3 {
+            font-size: 1.3rem;
+            color: #f1f5f9;
+            font-weight: 700;
+        }
+
+        .experience-date {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .experience-company {
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .experience-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
         /* Skills Section */
         .skills-grid {
             display: grid;
@@ -343,6 +363,38 @@
             font-weight: bold;
             font-size: 1.2rem;
             margin-right: 0.8rem;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .achievements h3 {
+            font-size: 1.5rem;
+            color: #f1f5f9;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .achievement-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #334155;
+            color: #cbd5e1;
+        }
+
+        .achievement-item:last-child {
+            border-bottom: none;
+        }
+
+        .achievement-item strong {
+            color: #667eea;
         }
 
         /* Footer */
@@ -391,6 +443,10 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .experience-header {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -402,6 +458,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -419,12 +476,12 @@
         <h1>Lomesh Soni</h1>
         <p class="title">Machine Learning Engineer</p>
         <p class="bio">
-            Machine Learning Engineer specializing in transformer architectures and large language models. 
-            I build ML systems from the ground up, with hands-on experience implementing state-of-the-art models like GPT. 
-            Passionate about deep learning research and bringing AI innovations from paper to production.
+            M.Tech student in AI & Data Science at IIIT Bangalore specializing in transformer architectures and deep learning. 
+            GATE DA AIR 210. Building ML systems from scratch with hands-on experience in implementing GPT, adversarial learning, 
+            and advanced regression models. Passionate about pushing the boundaries of deep learning research.
         </p>
         <div class="contact-links" id="contact">
-            <a href="mailto:your.email@gmail.com" class="contact-btn">
+            <a href="mailto:lomeshsoniwork@gmail.com" class="contact-btn">
                 <span>📧</span> Email
             </a>
             <a href="https://github.com/LomeshSoni" target="_blank" class="contact-btn">
@@ -433,7 +490,7 @@
             <a href="https://gitfront.io/r/LomeshSoni" target="_blank" class="contact-btn">
                 <span>📁</span> GitFront
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn">
+            <a href="https://www.linkedin.com/in/lomesh-soni/" target="_blank" class="contact-btn">
                 <span>💼</span> LinkedIn
             </a>
         </div>
@@ -446,53 +503,75 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>GPT Implementation from Scratch</h3>
+                    <h3>Mini GPT - Decoder-Only Transformer</h3>
                     <p>
-                        Built a complete GPT (Generative Pre-trained Transformer) implementation from scratch, including 
-                        multi-head attention mechanisms, positional encodings, and the full transformer architecture. 
-                        Trained on custom datasets with optimized training pipelines. Demonstrates deep understanding 
-                        of transformer mechanics, attention mechanisms, and large-scale model training.
+                        Implemented a GPT-style decoder-only Transformer from first principles in PyTorch, including causal self-attention, 
+                        positional embeddings, and autoregressive text generation. Built complete training pipeline with AdamW optimizer, 
+                        cosine learning-rate scheduling, gradient clipping, early stopping, and checkpointing. Integrated KV caching to 
+                        minimize redundant computations and developed custom Byte Pair Encoding tokenizer for vocabulary efficiency.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">Multi-Head Attention</span>
-                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">BPE Tokenizer</span>
+                        <span class="tech-tag">KV Caching</span>
                         <span class="tech-tag">NLP</span>
                     </div>
                     <a href="https://gitfront.io/r/LomeshSoni/QpxMkyZ2p2y8/deploy-gpt/" target="_blank" class="project-link">View Implementation →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Neural Network Framework</h3>
+                    <h3>Adversarial Attacks on CNNs</h3>
                     <p>
-                        Custom neural network framework implementing backpropagation, various optimization algorithms 
-                        (SGD, Adam, RMSprop), and common layer types. Built to understand the fundamentals of deep 
-                        learning frameworks and automatic differentiation.
+                        Designed a Deep Neural Network project analyzing the vulnerability of CNNs to adversarial noise. Implemented CNNs 
+                        as feature extractors to isolate high-level visual patterns and subjected them to gradient-based adversarial attacks 
+                        to evaluate model robustness. Conducted comparative analysis of model performance before and after adversarial 
+                        perturbation, documenting defense mechanisms against gradient-based attacks.
                     </p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Autograd</span>
-                        <span class="tech-tag">Optimization</span>
+                        <span class="tech-tag">Adversarial ML</span>
+                        <span class="tech-tag">CNN</span>
                     </div>
                     <a href="#" target="_blank" class="project-link">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Computer Vision Pipeline</h3>
+                    <h3>Advanced Regression & Deep Learning Analysis</h3>
                     <p>
-                        End-to-end computer vision system featuring custom CNN architectures, data augmentation 
-                        pipelines, and model deployment. Achieved state-of-the-art performance on benchmark datasets 
-                        through architecture optimization and transfer learning.
+                        Conducted systematic experiments across 15+ MLP architectures, varying depth, activation functions (Sigmoid, ReLU), 
+                        and optimizers (SGD, Adam) to study convergence and generalization behavior. Modeled non-linear relationships using 
+                        Polynomial Regression (degrees 1-5) with L1/L2 regularization, improving R² from 0.80 to 0.93 while controlling 
+                        overfitting. Benchmarked full-batch, mini-batch, and stochastic gradient descent.
                     </p>
                     <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Keras</span>
-                        <span class="tech-tag">CNNs</span>
-                        <span class="tech-tag">Transfer Learning</span>
+                        <span class="tech-tag">Regression</span>
+                        <span class="tech-tag">Optimization</span>
                     </div>
                     <a href="#" target="_blank" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Engineer</h3>
+                        <span class="experience-date">Jul 2023 – Dec 2024</span>
+                    </div>
+                    <p class="experience-company">Musikaar · Ahmedabad, India</p>
+                    <p>
+                        Developed automation frameworks and CI/CD pipelines, optimizing test execution and reducing validation time by 30%. 
+                        Gained strong software engineering fundamentals that complement ML research work.
+                    </p>
                 </div>
             </div>
         </section>
@@ -502,34 +581,54 @@
             <h2>Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>ML/DL Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>PyTorch</li>
+                        <li>TensorFlow</li>
+                        <li>Scikit-learn</li>
+                        <li>Hugging Face Transformers</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
                     <h3>Deep Learning</h3>
                     <ul class="skill-list">
                         <li>Transformer Architectures</li>
                         <li>CNNs & Computer Vision</li>
-                        <li>RNNs & LSTMs</li>
-                        <li>GANs & Generative Models</li>
-                        <li>Attention Mechanisms</li>
+                        <li>Transfer Learning</li>
+                        <li>NLP & Text Generation</li>
+                        <li>Adversarial Learning</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>ML Frameworks & Tools</h3>
+                    <h3>Data Science & Tools</h3>
                     <ul class="skill-list">
-                        <li>PyTorch</li>
-                        <li>TensorFlow / Keras</li>
-                        <li>Hugging Face Transformers</li>
-                        <li>scikit-learn</li>
-                        <li>CUDA / GPU Programming</li>
+                        <li>Statistics & EDA</li>
+                        <li>Regression Analysis</li>
+                        <li>Git/GitHub</li>
+                        <li>TensorBoard</li>
+                        <li>MLOps Basics</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>MLOps & Deployment</h3>
-                    <ul class="skill-list">
-                        <li>Model Training Pipelines</li>
-                        <li>Docker & Kubernetes</li>
-                        <li>MLflow & Experiment Tracking</li>
-                        <li>Model Optimization & Quantization</li>
-                        <li>Cloud Deployment (AWS/GCP)</li>
-                    </ul>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section>
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <div class="achievement-item">
+                    <strong>GATE 2025:</strong> Secured All India Rank 210 in GATE DA (Data Science and Artificial Intelligence)
+                </div>
+                <div class="achievement-item">
+                    <strong>Education:</strong> M.Tech in AI & Data Science at IIIT Bangalore (Jun 2025 – Present)
                 </div>
             </div>
         </section>
